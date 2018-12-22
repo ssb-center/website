@@ -25,7 +25,7 @@
       if (node[0] === 'END') {
         return node.slice(1).map((charId, i) => {
           var char = window.Characters[charId]
-          var content = m('.promo',
+          var content = m('.promo.character-promo',
             m('a.promo__link-wrapper[target=_blank]',
               {
                 href: `https://www.smashbros.com/en_US/fighter/${char.num}.html`,
@@ -48,7 +48,12 @@
               ),
               m('.care-card__arrow', { ariaHidden: "true" })
             ),
-            m('.care-card__content', { style: 'padding-top: 4rem' }, content)
+            m('.care-card__content', {
+              style: `
+                padding-top: 4rem;
+                background-image: url(https://www.smashbros.com/assets_v2/img/fighter/${charId}/bg.jpg)
+              `
+            }, content)
           )
         })
       }
