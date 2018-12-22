@@ -1,0 +1,35 @@
+.fade-in {
+  animation: fade-in 1.5s;
+}
+@keyframes fade-in {
+    0% { opacity:0; }
+    20% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.character-image {
+  min-height: 24rem;
+  max-height: 80vh;
+  position: relative;
+  text-align: center;
+}
+.character-image img.portrait {
+  min-height: 24rem;
+  max-height: 75vh;
+  max-width: 100%;
+  position: relative; top: -10vh;
+  z-index: 2;
+}
+.character-image img.name {
+  max-height: 55vh;
+  max-width: 100%;
+  position: absolute; bottom: 0;
+  transition: filter 0.3s;
+}
+.character-image:hover img.name {
+  filter: blur(4px);
+}
+.character-image.-align-left  .portrait { left: -4vw; }
+.character-image.-align-right .portrait { right: -4vw; }
+.character-image.-align-left  .name { left: 0; }
+.character-image.-align-right .name { right: 0; }
