@@ -139,7 +139,7 @@
       ["Push them back", [
         "Do you like weird gimmicks?",
         ["Yes", [
-          "Do you like to solve math problems?"
+          "Do you like to solve math problems?",
           ["Not much", ["END", "olimar"]],
           ["5 times 5 is 25", ["END", "robin"]],
         ]],
