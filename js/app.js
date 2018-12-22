@@ -67,7 +67,11 @@
           node.slice(1).map(([text, next]) =>
             m('li.list-panel__item',
               m('a.list-panel__link[href=#]', {
-                class: path[i+1] && path[i+1][0] === next[0] ? 'active' : '',
+                class: path[i+1] && (
+                  next[0] === 'END'
+                    ? path[i+1][1] === next[1]
+                    : path[i+1][0] === next[0]
+                ) ? 'active' : '',
                 onclick(e) {
                   e.preventDefault()
                   path = path.slice(0,i+1).concat([next])
