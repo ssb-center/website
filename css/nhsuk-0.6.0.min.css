@@ -3306,7 +3306,7 @@ b,strong{
     padding-bottom:24px;
     padding-top:24px;
     background-color:#d8dde0;
-    border-top:4px solid #005eb8
+    border-top:4px solid hsla(203, 11%, 83%, 1);
 }
 .footer:after{
     clear:both;
